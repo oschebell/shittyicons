@@ -32,12 +32,16 @@ export default {
     }
   }, 
   created(){
+    console.log(db)
     //fetch data from firestore
-    db.collection('smoothies').get()
+    db.collection('Smoothies').get()
     .then(snapshot => {
       snapshot.forEach(doc => {
         console.log(doc.data())
       })
+    })
+    .catch(err => {
+      console.log(err)
     })
   }
 }
