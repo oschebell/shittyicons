@@ -9,6 +9,8 @@
             <span class="chip">{{ ing }}</span>
           </li>
         </ul>
+          <a :href="smoothie.image" download="smoothie.image"><img :src="smoothie.image"  style="height:48px"  alt="" ></a>
+       
       </div>
     </div>
   </div>
@@ -32,12 +34,12 @@ export default {
     }
   }, 
   created(){
-    console.log(db)
+    
     //fetch data from firestore
     db.collection('Smoothies').get()
     .then(snapshot => {
       snapshot.forEach(doc => {
-        console.log(doc.data())
+        this.smoothies.push(doc.data())
       })
     })
     .catch(err => {
