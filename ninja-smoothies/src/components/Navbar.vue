@@ -26,27 +26,23 @@ export default {
 .nav-title {
   color: #000;
 }
+
+
 .navbar nav{
-  padding: 0 20px;
+
   background-color: #fff;
   box-shadow: none;
 }
 
-.index-container {
-  width: 500px;
-}
+/* #app {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+} */
+
 .card {
   box-shadow: none;
-}
 
-.card-content a {
-  align-content: center;
 }
-
-a img {
-  align-content: center;
-}
-
 
 </style>
-
