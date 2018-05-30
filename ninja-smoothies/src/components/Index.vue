@@ -1,5 +1,15 @@
 <template>
 <div>
+<div class="feedback">
+    <span class="feedback-title">Got feedback?</span>
+    <img class="img-valign-2" src="../assets/boxing.png" alt=""/>
+    <form method="POST" action="https://formspree.io/oschebell@gmail.com">
+    <input name="email" placeholder="email" type="email">
+    <textarea name="message" placeholder="message"></textarea>
+    <button type="submit">Send</button>
+    <input type="hidden" name="_next" value="https://site.io/thanks.html"/>
+  </form>
+</div>
 
 <img class="hand" src="../assets/handpoint.png" alt="" />
   <span class="intro">
@@ -80,12 +90,17 @@ export default {
 
 <style>
 
+
 #app {
 
   max-width: 700px;
   margin: auto;
 }
 
+ .feedback {
+  text-align: center;
+  margin: 0px;
+}
 .container {
   margin: -20px;
 }
@@ -96,12 +111,64 @@ export default {
   width: 2rem;
 }
 
+.img-valign-2 {
+  vertical-align: middle;
+  margin-bottom: 0.75em;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+input[type="email"] {
+  border: 1px solid rgb(133, 133, 133) !important;
+;
+}
+
+textarea {
+  border: 1px solid rgb(133, 133, 133) !important;
+}
+
+input[type="email"]:active {
+  border-bottom: 1px solid #000 !important;
+}
+
 .hand {
   position:fixed;
-      top: 10%;
-      left:0%;
-      height: 6rem;
-      width: 6rem;
+  top: 10%;
+  left:0%;
+  height: 6rem;
+  width: 6rem;
+  transition: 1.5s;
+}
+
+.hand:hover {
+  position:fixed;
+  top: 10%;
+  left:-30px;
+  height: 6rem;
+  width: 6rem;
+}
+
+.feedback {
+ max-width: 200px;
+ padding: 3px;
+ border: 1px solid #000;
+ position:fixed;
+ bottom: -135px;
+ left: 3%;
+}
+
+
+button:focus {
+  background-color: peachpuff;
+}
+
+.feedback:hover {
+ max-width: 200px;
+ padding: 3px;
+ border: 1px solid #000;
+ position:fixed;
+ bottom: -1px;
+ left: 3%;
 }
 
 .cantfind {
@@ -138,4 +205,8 @@ img {
 	margin-right: auto;
 
 }
+
+
+
+
 </style>
