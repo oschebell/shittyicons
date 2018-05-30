@@ -11,10 +11,20 @@
   </form>
 </div>
 
-<img class="hand" src="../assets/handpoint.png" alt="" />
+<img class="hand" src="../assets/handpoint.png" alt=""/>
+<img class="ninja" src="../assets/ninja.png" alt="" />
+<img class="free" src="../assets/free.png" alt="" />
+
+<!-- <p>Find an excuse to let one of these bad boys off the chain and I personally guarantee you'll be the envy of all your co-workers.</p> -->
+<!-- <span>Jazz up your Slack and be the envy of all your colleagues and coworkers!</span> -->
+<span></span>
   <span class="intro">
-    <p class="cantfind">Can't find what you're looking for?</p>
-    <p><a href="#">Drop me a line</a> and let me know what you need!</p>
+
+    <p class="cantfind">Had something special in mind?</p>
+
+    <p>Just <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=@oschebella+%23shittyicons+">shout out</a> and let me know what icon you're after and I'll probably make it for you!</p>
+  <p>(Please be patient: I have poured several seconds into finely crafting every single icon by hand)</p>
   </span>
 
 <div class="shout-box">
@@ -25,7 +35,7 @@
 
   <div class="index container">
 
-
+<span class="boop">boop</span>
 
     <div class="card" v-for="icon in icons" :key="icon.id">
       <div class="card-content">
@@ -97,12 +107,16 @@ export default {
   margin: auto;
 }
 
+h1 {
+  font-size: 32px;
+}
  .feedback {
   text-align: center;
   margin: 0px;
 }
 .container {
   margin: -20px;
+
 }
 .img-valign {
   vertical-align: middle;
@@ -133,19 +147,47 @@ input[type="email"]:active {
 
 .hand {
   position:fixed;
-  top: 10%;
+  top: 14%;
   left:0%;
   height: 6rem;
   width: 6rem;
-  transition: 1.5s;
+  transition: 1.2s;
+  z-index: 90;
+}
+
+.boop {
+  position:fixed;
+  top: 19%;
+  left:4%;
+  z-index: -1;
+  font-size: .6rem;
+}
+
+.ninja {
+  transform: rotate(180deg);
+  position:fixed;
+  top:-9px;
+  right:6%;
+  width: 70px;
+  height: 70px;
+  z-index: 90;
+}
+
+.free {
+  position:fixed;
+  top:3%;
+  right:11%;
+  height: 55px;
+  z-index: 100;
 }
 
 .hand:hover {
   position:fixed;
-  top: 10%;
+  top: 14%;
   left:-30px;
   height: 6rem;
   width: 6rem;
+  z-index: 89;
 }
 
 .feedback {
@@ -155,10 +197,11 @@ input[type="email"]:active {
  position:fixed;
  bottom: -135px;
  left: 3%;
+ transition: 0.5s;
+ z-index: 100;
 }
 
-
-button:focus {
+button:active {
   background-color: peachpuff;
 }
 
@@ -169,6 +212,7 @@ button:focus {
  position:fixed;
  bottom: -1px;
  left: 3%;
+ z-index: 100;
 }
 
 .cantfind {
