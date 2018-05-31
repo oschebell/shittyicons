@@ -199,6 +199,7 @@ input[type="email"]:active {
  left: 3%;
  transition: 0.5s;
  z-index: 100;
+ background-color: #fff;
 }
 
 button:active {
@@ -248,6 +249,48 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 
+}
+
+@media(max-width: 625px) {
+  .index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 0px;
+    padding: 0px;
+}
+
+.hand {
+  display: none;
+  }
+
+.boop {
+  display: none;
+}
+
+.free {
+  display: none;
+}
+
+.feedback {
+  bottom: -120px;
+}
+
+}
+
+@media(max-width: 1000px) {
+  .feedback {
+    bottom: -127px;
+  }
+}
+
+@media(max-width: 855px) {
+  .hand {
+    display:none;
+  }
+  .boop {
+    display: none;
+  }
 }
 
 
