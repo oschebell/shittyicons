@@ -7,13 +7,16 @@
     <input name="email" placeholder="email" type="email">
     <textarea name="message" placeholder="message"></textarea>
     <button type="submit">Send</button>
-    <input type="hidden" name="_next" value="https://site.io/thanks.html"/>
+    <input type="hidden" name="_next" value="Send"/>
   </form>
 </div>
 
 <img class="hand" src="../assets/handpoint.png" alt=""/>
-<img class="ninja" src="../assets/ninja.png" alt="" />
-<img class="free" src="../assets/free.png" alt="" />
+
+<div class="ninjabox">
+  <img class="free" src="../assets/free.png" alt="" />
+  <img class="ninja" src="../assets/ninja.png" alt="" />
+</div>
 
 <!-- <p>Find an excuse to let one of these bad boys off the chain and I personally guarantee you'll be the envy of all your co-workers.</p> -->
 <!-- <span>Jazz up your Slack and be the envy of all your colleagues and coworkers!</span> -->
@@ -35,7 +38,7 @@
 
   <div class="index container">
 
-<span class="boop">boop</span>
+<!-- <span class="boop">boop</span> -->
 
     <div class="card" v-for="icon in icons" :key="icon.id">
       <div class="card-content">
@@ -165,18 +168,26 @@ input[type="email"]:active {
 
 .ninja {
   transform: rotate(180deg);
-  position:fixed;
+  /* position:fixed;
   top:-9px;
-  right:6%;
+  right:6%; */
   width: 70px;
   height: 70px;
   z-index: 90;
 }
 
 .free {
+  /* position:fixed;
+  top:45px;
+  right:9%; */
+  height: 55px;
+  z-index: 100;
+}
+
+.ninjabox {
   position:fixed;
-  top:3%;
-  right:11%;
+  top:-8px;
+  right:9%;
   height: 55px;
   z-index: 100;
 }
@@ -202,7 +213,7 @@ input[type="email"]:active {
  background-color: #fff;
 }
 
-button:active {
+button:focus {
   background-color: peachpuff;
 }
 
